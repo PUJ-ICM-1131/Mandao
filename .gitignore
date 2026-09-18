@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Directorio de trabajo del compilador de Kotlin (generado)
+.kotlin/
+
+# Archivos de sistema del explorador (Windows)
+Thumbs.db
+desktop.ini
