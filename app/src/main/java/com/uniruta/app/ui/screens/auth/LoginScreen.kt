@@ -64,7 +64,7 @@ fun LoginScreen(
                 color = MaterialTheme.colorScheme.primary
             )
             Text(
-                text = "Tu ruta al campus, siempre a tiempo.",
+                text = "Tu ruta al campus, en un solo lugar.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,

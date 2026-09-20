@@ -29,3 +29,8 @@ val OnSurfaceDark = Color(0xFFE2E2E6)
 val SurfaceVariantDark = Color(0xFF43474E)
 val OnSurfaceVariantDark = Color(0xFFC3C7CF)
 val OutlineDark = Color(0xFF8D9199)
+
+val SuccessContainerLight = Color(0xFFC6EDCB)
+val OnSuccessContainerLight = Color(0xFF0B3D16)
+val SuccessContainerDark = Color(0xFF1E4A28)
+val OnSuccessContainerDark = Color(0xFFBEEFC7)

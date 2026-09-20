@@ -3,10 +3,6 @@ package com.uniruta.app.data.mock
 import com.uniruta.app.data.model.MockUser
 import com.uniruta.app.data.model.UserRole
 
-/**
- * Cuentas de demostración usadas mientras no exista backend real.
- * Se reemplazará por Firebase Authentication en una entrega posterior.
- */
 object MockAccounts {
 
     const val DEMO_PASSWORD = "123456"
