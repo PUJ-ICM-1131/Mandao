@@ -43,6 +43,30 @@ data class ReservationDetail(val reservationId: String) : NavKey
 @Serializable
 data class StudentPass(val reservationId: String? = null) : NavKey
 
+@Serializable
+data object DriverTrips : NavKey
+
+@Serializable
+data class DriverTripDetail(val tripId: String) : NavKey
+
+@Serializable
+data object ActiveTrip : NavKey
+
+@Serializable
+data object QrScannerMock : NavKey
+
+@Serializable
+data object BoardingResult : NavKey
+
+@Serializable
+data object DriverPassengers : NavKey
+
+@Serializable
+data object ReportIncident : NavKey
+
+@Serializable
+data class TripFinished(val tripId: String) : NavKey
+
 fun homeDestinationFor(role: UserRole): NavKey = when (role) {
     UserRole.STUDENT -> StudentHome
     UserRole.DRIVER -> DriverHome

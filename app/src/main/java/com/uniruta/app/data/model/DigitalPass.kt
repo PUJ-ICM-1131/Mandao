@@ -3,7 +3,7 @@ package com.uniruta.app.data.model
 enum class PassStatus(val label: String) {
     ACTIVE("Activo"),
     USED("Utilizado"),
-    EXPIRED("Vencido")
+    INVALID("No válido")
 }
 
 data class DigitalPass(

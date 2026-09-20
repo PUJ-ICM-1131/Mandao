@@ -12,6 +12,8 @@ import androidx.compose.ui.unit.dp
 import com.uniruta.app.data.model.PassStatus
 import com.uniruta.app.data.model.PaymentStatus
 import com.uniruta.app.data.model.ReservationStatus
+import com.uniruta.app.data.model.TrackingStatus
+import com.uniruta.app.data.model.TripStatus
 import com.uniruta.app.ui.theme.OnSuccessContainerDark
 import com.uniruta.app.ui.theme.OnSuccessContainerLight
 import com.uniruta.app.ui.theme.SuccessContainerDark
@@ -77,5 +79,17 @@ fun PaymentStatus.tone(): StatusTone = when (this) {
 fun PassStatus.tone(): StatusTone = when (this) {
     PassStatus.ACTIVE -> StatusTone.POSITIVE
     PassStatus.USED -> StatusTone.NEUTRAL
-    PassStatus.EXPIRED -> StatusTone.NEGATIVE
+    PassStatus.INVALID -> StatusTone.NEGATIVE
+}
+
+fun TripStatus.tone(): StatusTone = when (this) {
+    TripStatus.SCHEDULED -> StatusTone.NEUTRAL
+    TripStatus.IN_PROGRESS -> StatusTone.WARNING
+    TripStatus.COMPLETED -> StatusTone.POSITIVE
+    TripStatus.CANCELLED -> StatusTone.NEGATIVE
+}
+
+fun TrackingStatus.tone(): StatusTone = when (this) {
+    TrackingStatus.ACTIVE -> StatusTone.POSITIVE
+    TrackingStatus.INACTIVE -> StatusTone.NEUTRAL
 }
