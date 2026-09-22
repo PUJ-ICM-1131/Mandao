@@ -14,6 +14,7 @@ import com.uniruta.app.data.model.PaymentStatus
 import com.uniruta.app.data.model.ReservationStatus
 import com.uniruta.app.data.model.TrackingStatus
 import com.uniruta.app.data.model.TripStatus
+import com.uniruta.app.data.model.VehicleStatus
 import com.uniruta.app.ui.theme.OnSuccessContainerDark
 import com.uniruta.app.ui.theme.OnSuccessContainerLight
 import com.uniruta.app.ui.theme.SuccessContainerDark
@@ -92,4 +93,10 @@ fun TripStatus.tone(): StatusTone = when (this) {
 fun TrackingStatus.tone(): StatusTone = when (this) {
     TrackingStatus.ACTIVE -> StatusTone.POSITIVE
     TrackingStatus.INACTIVE -> StatusTone.NEUTRAL
+}
+
+fun VehicleStatus.tone(): StatusTone = when (this) {
+    VehicleStatus.ACTIVE -> StatusTone.POSITIVE
+    VehicleStatus.INACTIVE -> StatusTone.NEUTRAL
+    VehicleStatus.MAINTENANCE -> StatusTone.WARNING
 }

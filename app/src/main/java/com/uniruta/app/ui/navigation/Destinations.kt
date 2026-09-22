@@ -67,6 +67,30 @@ data object ReportIncident : NavKey
 @Serializable
 data class TripFinished(val tripId: String) : NavKey
 
+@Serializable
+data object AdminRoutes : NavKey
+
+@Serializable
+data class AdminRouteForm(val routeId: String? = null) : NavKey
+
+@Serializable
+data object AdminVehicles : NavKey
+
+@Serializable
+data class AdminVehicleForm(val vehicleId: String? = null) : NavKey
+
+@Serializable
+data object AdminTrips : NavKey
+
+@Serializable
+data object AdminTripForm : NavKey
+
+@Serializable
+data object AdminPayments : NavKey
+
+@Serializable
+data class AdminPaymentDetail(val paymentId: String) : NavKey
+
 fun homeDestinationFor(role: UserRole): NavKey = when (role) {
     UserRole.STUDENT -> StudentHome
     UserRole.DRIVER -> DriverHome

@@ -27,7 +27,8 @@ fun RoleHomeScaffold(
     headline: String,
     features: List<FeatureItem>,
     onLogout: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    header: (@Composable () -> Unit)? = null
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -65,6 +66,14 @@ fun RoleHomeScaffold(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(top = 4.dp, bottom = 12.dp)
                     )
+                }
+            }
+
+            if (header != null) {
+                item {
+                    Column(modifier = Modifier.padding(bottom = 4.dp)) {
+                        header()
+                    }
                 }
             }
 

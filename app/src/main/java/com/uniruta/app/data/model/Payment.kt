@@ -22,11 +22,18 @@ enum class PaymentStatus(val label: String) {
     REJECTED("Rechazado")
 }
 
+enum class RejectionReason(val label: String) {
+    UNREADABLE_RECEIPT("Comprobante ilegible"),
+    WRONG_AMOUNT("Valor incorrecto"),
+    OTHER("Otro")
+}
+
 data class Payment(
     val id: String,
     val reservationId: String,
     val amount: Int,
     val method: PaymentMethod,
     val status: PaymentStatus,
-    val receiptName: String? = null
+    val receiptName: String? = null,
+    val rejectionReason: RejectionReason? = null
 )

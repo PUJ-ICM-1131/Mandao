@@ -19,4 +19,13 @@ data class TripPassenger(
         get() = !hasBoarded &&
             reservation.status == ReservationStatus.CONFIRMED &&
             payment.status == PaymentStatus.CONFIRMED
+
+    val reviewableByAdmin: Boolean
+        get() = payment.method != PaymentMethod.CASH_BOARDING && reservation.isActive
+
+    val requiresAdminReview: Boolean
+        get() = reviewableByAdmin && (
+            payment.status == PaymentStatus.UNDER_REVIEW ||
+                (payment.method == PaymentMethod.CASH_POINT && payment.status == PaymentStatus.PENDING)
+            )
 }
